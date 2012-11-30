@@ -1,0 +1,148 @@
+<html>
+<head>
+	<title>Brick List</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<!--
+	<script type="text/javascript" src="js/jquery.mobile.min.js"></script>
+	-->
+	<style>
+		.time {
+			color: #6bb3ca;
+		}
+		.date {
+			color: #6bb3ca;
+		}
+		#list {
+			background: url("imgs/double_lines.png") repeat-y 90px;
+			padding: 0;
+			color: #555; 
+		}
+		#list li {
+			border-top: 1px solid #e6ebed;
+			padding: 3px 5px;
+			zoom: 1;
+			overflow: hidden;
+		}
+		.del-sec {
+			color: #8b8f97;
+		}
+		.t-sec {
+			width: 100px;
+			float: left;
+		}
+		.c-sec {
+			float: left;
+		}
+	</style>
+	<script>
+		function updateDateTime() {
+			var d = new Date();
+			$('#local-time').text(d.toTimeString().substr(0,8));
+			$('#local-date').text(d.toDateString());
+			setTimeout('updateDateTime()', 1000);
+		}
+		$(function () {			
+			updateDateTime();
+			/*
+			$('.sec').swipe(function () {
+				$(this).toggleClass('del-sec');
+			});
+			*/
+		});
+	</script>
+</head>
+<body>
+	<div class="container"><div class="row">
+	<div class="span12">
+		<h1 style="width: 60px; float: left; color: #555;">Bricks List</h1>
+		<h2 class="time" id="local-time" style="float: right; clear: right; margin-top: 20px;">Loading</h2>
+		<h4 class="date" id="local-date" style="float: right; clear: right; margin-top: -5px;">Loading</h4>
+	</div>
+	</div></div>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<ul id="list" class="unstyled">
+					<li class="sec">
+						<div class="t-sec">
+							<div class="supposed date">2012-12-01</div>
+							<div class="fact date">&nbsp;</div>
+						</div>
+						<div class="c-sec">
+							交出高要的图，结束DCN这波战斗
+						</div>
+					</li>
+					<li class="sec">
+						<div class="t-sec">
+							<div class="supposed date">2012-12-03</div>
+							<div class="fact date">&nbsp;</div>
+						</div>
+						<div class="c-sec">
+							完成 申请通 需求明确
+						</div>
+					</li>
+					<li class="sec">
+						<div class="t-sec">
+							<div class="supposed date">2012-12-04</div>
+							<div class="fact date">&nbsp;</div>
+						</div>
+						<div class="c-sec">
+							搞定 试点班 成就网页
+						</div>
+					</li>
+					<li class="sec">
+						<div class="t-sec">
+							<div class="supposed date">2012-12-05</div>
+							<div class="fact date">&nbsp;</div>
+						</div>
+						<div class="c-sec">
+							tzb网页修改（人员变动）
+						</div>
+					</li>
+					<li class="sec">
+						<div class="t-sec">
+							<div class="supposed date">2012-12-05</div>
+							<div class="fact date">&nbsp;</div>
+						</div>
+						<div class="c-sec">
+							完成 图形设计 大作业
+						</div>
+					</li>
+					<li class="sec">
+						<div class="t-sec">
+							<div class="supposed date">2012-12-06</div>
+							<div class="fact date">&nbsp;</div>
+						</div>
+						<div class="c-sec">
+							完成人脸识别代码
+						</div>
+					</li>
+					<li class="sec">
+						<div class="t-sec">
+							<div class="supposed date">2012-12-06</div>
+							<div class="fact date">&nbsp;</div>
+						</div>
+						<div class="c-sec">
+							测试完成autosys-debug以及df/du monitor
+						</div>
+					</li>
+					<li class="sec">
+						<div class="t-sec">
+							<div class="supposed date">2012-12-10</div>
+							<div class="fact date">&nbsp;</div>
+						</div>
+						<div class="c-sec">
+							完成仪器系部分需求（界面为主）
+						</div>
+					</li>
+					<li style="padding: 0"></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
